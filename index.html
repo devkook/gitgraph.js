@@ -1,151 +1,71 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Gitgraph.js</title>
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
-  <link rel="stylesheet" type="text/css" href="css/gitgraph.css" />
-</head>
-<body>
-  <header>
-    <img src="img/gitgraph-logo.png" alt="Gitgraph.js main logo">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Gitgraph.js by devkook</title>
 
-    <!-- GitHub ribbon -->
-    <a href="https://github.com/nicoespeon/gitgraph.js">
-      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub">
-    </a>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Gitgraph.js</h1>
+        <p>A JavaScript library to draw pretty git graphs in the browser</p>
 
-    <nav>
-      <a href="#" id="nav-presentation">Presentation</a>
-      <a href="#" id="nav-init">Quick start</a>
-      <a href="#" id="nav-base">Basics</a>
-      <a href="#" id="nav-branch">Branchs</a>
-      <a href="#" id="nav-commit">Commits</a>
-      <a href="#" id="nav-checkout">Checkout</a>
-      <a href="#" id="nav-merge">Merge</a>
-    </nav>
-  </header>
+        <p class="view"><a href="https://github.com/devkook/gitgraph.js">View the Project on GitHub <small>devkook/gitgraph.js</small></a></p>
 
-  <section>
-    <!-- GitGraph canvas -->
-    <canvas id="gitGraph"></canvas>
 
-    <!-- Details divs -->
-    <div id="detail-presentation" class="gitgraph-detail">
-      <p>Git is a powerful tool, sometimes hard to handle.</p>
-      <p><strong>Gitgraph.js</strong> is a simple JavaScript library which is meant to help you visually presenting git branching stuff like a git workflow, a tricky git command or whatever git tree you'd have in mind.</p>
-      <p>We use canvas so you don't have to draw your branching illustrations into Photoshop nor Keynote to present something cool. Just <strong>code it</strong> directly in the browser.</p>
-      <p><em>One does not simply illustrate git branching models. This library is the one to draw them all.</em></p>
+        <ul>
+          <li><a href="https://github.com/devkook/gitgraph.js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/devkook/gitgraph.js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/devkook/gitgraph.js">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/devkook">devkook</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-
-    <div id="detail-init" class="gitgraph-detail">
-      <p>This is very straightforward:</p>
-      <h3>1. Download gitgraph.js</h3>
-      <p>With git <img src="img/github-logo.png" alt="github logo"> : </p><pre class="prettyprint">git clone http://github.com/nicoespeon/gitgraph.js.git</pre>
-      <p>With Bower <img src="img/bower-logo.png" alt="bower logo"> : </p><pre class="prettyprint">bower install gitgraph.js</pre>
-      <h3>2. Prepare the HTML</h3>
-      <p>Load the library: </p><pre class="prettyprint">&lt;script src="js/gitgraph.min.js"&gt;&lt;/script&gt;</pre>
-      <p>Add the stylesheet: </p><pre class="prettyprint">&lt;link rel="stylesheet" type="text/css" href="css/gitgraph.css" /&gt;</pre>
-      <p>Then, just add a canvas container: </p><pre class="prettyprint">&lt;canvas id="gitGraph"&gt;&lt;/canvas&gt;</pre>
-      <h3>3. Unleash the graph!</h3>
-      <p>Now you're all set, ready to commit and draw a nice git graph in JavaScript \o/</p>
-    </div>
-
-    <div id="detail-base" class="gitgraph-detail">
-      <p>Once files are loaded and canvas is created, you could use the <code>GitGraph</code> object.</p>
-      <pre class="prettyprint">var gitgraph = new GitGraph();</pre>
-      <p>Eventually, you could add some options here: </p>
-      <ul>
-        <li>a specific<code>template</code>: <code>"blackarrow"</code> or <code>"metro"</code> (default)</li>
-        <li>the graph <code>orientation</code>: <code>"vertical-reverse"</code>, <code>"horizontal"</code>, <code>"horizontal-reverse"</code> or even <code>"vertical"</code> (default)</li>
-        <li>the display <code>mode</code>: <code>"compact"</code> for a compact mode, or <code>"extended"</code> (default)</li>
-        <li>the <code>elementId</code>: the canvas ID (<code>"gitGraph"</code> is the default)</li>
-        <li>a default <code>author</code> for commits</li>
-      </ul>
-      <p>For instance:</p>
-      <pre class="prettyprint">var gitgraph = new GitGraph({
-  template: "blackarrow",
-  orientation: "horizontal",
-  mode: "compact"
-});</pre>
-      <canvas id="gitgraph-template-blackarrow"></canvas>
-      <p>Or with another template:</p>
-      <pre class="prettyprint">var gitgraph = new GitGraph({
-  template: "metro",
-  orientation: "horizontal",
-  mode: "compact"
-});</pre>
-      <canvas id="gitgraph-template-metro" height="50px"></canvas>
-    </div>
-
-    <div id="detail-branch" class="gitgraph-detail">
-      <p>Let's create our first branch. We give the branch name as a parameter.</p>
-      <pre class="prettyprint">var master = gitgraph.branch("master");</pre>
-      <p>Now, <code>gitgraph.HEAD</code> is set to <code>master</code> so we can add some commits on the fly and create a new branch:</p>
-      <pre class="prettyprint">gitgraph.commit().commit().commit(); // 3 commits upon HEAD
-var develop = gitgraph.branch("develop"); // New branch from HEAD
-var myfeature = develop.branch("myfeature"); // New branch from develop</pre>
-      <p>The <code>develop</code> branch is based from <code>HEAD</code>, which was on <code>master</code>.</p>
-      <p>It does exactly what you'd expect!</p>
-    </div>
-
-    <div id="detail-commit" class="gitgraph-detail">
-      <p>Let's do some custom commits.</p>
-      <p>Basically, define your commit message:</p>
-      <pre class="prettyprint">master.commit("This commit is mine"); // Add a commit on master branch</pre>
-      <p>Or you may want to go a bit further:</p>
-      <pre class="prettyprint">develop.commit({
-  dotColor: "white",
-  dotSize: 10,
-  dotStrokeWidth: 10,
-  sha1: "666",
-  message: "Pimp dat commit",
-  author: "Jacky &lt;prince@dutunning.com&gt;"
-});</pre>
-      <p>Note that I can choose either to commit on any existing branch, either on the <code>HEAD</code> with <code>gitgraph.commit()</code>.</p>
-    </div>
-
-    <div id="detail-checkout" class="gitgraph-detail">
-      <p>Even though it's not indispensable, we introduced the <code>HEAD</code> principle in <strong>Gitgraph.js</strong>. Except that our tag is just a reference to a branch for the library.</p>
-      <p>That way you could eventually checkout to another branch:</p>
-      <pre class="prettyprint">master.checkout();</pre>
-      <p>And so create a <code>feature-of-death</code> from the <code>develop</code> branch that way:</p>
-      <pre class="prettyprint">develop.checkout();
-var featureOfDeath = gitgraph.branch("feature-of-death");</pre>
-    </div>
-
-    <div id="detail-merge" class="gitgraph-detail">
-      <p>You can merge a branch into another, that simply:</p>
-      <pre class="prettyprint">master.merge(develop); // Merge master into develop</pre>
-      <p>But wait, there's more! Customize the merge commit, your way, just like any other commit:</p>
-      <pre class="prettyprint">master.merge(develop, "Epic merge commit");
-master.merge(develop, { dotColor: "red" }); // The commit will be red, 'coz red is fashion!</pre>
-      <p>And you can delete a branch to create another one on the same column:</p>
-      <pre class="prettyprint">master.delete();</pre>
-    </div>
-
-    <div id="detail-contribute" class="gitgraph-detail">
-      <p>You get some fuckingood features ideas, or spotted some nasty bugs? Just come and open an issue or a Pull-Request on the <a href="http://github.com/nicoespeon/gitgraph.js">project repo</a>.</p>
-      <p>Looking for some technical documentation? <a href="docs/index.html">Here you go</a>!</p>
-    </div>
-
-    <div id="detail-examples" class="gitgraph-detail">
-      <p>You'll find <a href="http://github.com/nicoespeon/gitgraph.js/tree/master/examples">some use cases</a> for inspiration.</p>
-      <p>Well, you also can check the source code of this page ;)</p>
-    </div>
-
-    <div id="detail-sergio" class="gitgraph-detail">
-      <iframe width="560" height="315" src="//www.youtube.com/embed/GaoLU6zKaws?rel=0" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <!-- Scripts -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-  <script src="js/gitgraph.min.js"></script>
-  <script src="js/index.js"></script>
-
-  <!-- Google Analytics -->
-  <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-39957541-3"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.type="text/javascript";ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})();</script>
-</body>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
 </html>
